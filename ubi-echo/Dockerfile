@@ -6,4 +6,5 @@ RUN echo "while true; do echo test; sleep 5; done" > /apps/out.sh
 USER 1001
 #CMD bash -c "while true; do echo test; sleep 5; done"
 #ENTRYPOINT [ "bash", "-c", "while true; do echo test; sleep 5; done"]
-ENTRYPOINT [ "bash", "-c", "/apps/out.sh"]
+#ENTRYPOINT [ "bash", "-c", "/apps/out.sh"]
+ENTRYPOINT [ "bash", "-c", "tail -f /dev/null"]
