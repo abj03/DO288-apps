@@ -4,7 +4,7 @@ FROM ubi8-openjdk-17:1.16
 COPY pom.xml .
 RUN mvn dependency:go-offline
 
-COPY src .
+COPY src src
 RUN mvn clean package
 
 #RUN chgrp -R 0 /target && /
