@@ -7,7 +7,7 @@ RUN mvn dependency:go-offline
 COPY src .
 RUN mvn clean package
 
-RUN chgrp -R 0 /target && /
-  chmod -R g=u /target
+#RUN chgrp -R 0 /target && /
+#  chmod -R g=u /target
 
-CMD ["java", "-jar", "target/expense-service-1.0.0-SNAPSHOT-runner.jar"]
+CMD ["java", "-jar", "target/expense-service-1.0.0-SNAPSHOT.jar"]
